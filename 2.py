@@ -76,19 +76,16 @@ class Graph:
 
             if solved == True:  
                 self.setStatus(v, -1)
-                self.solutionGraph[
-                    v] = childNodeList  
+                self.solutionGraph[v] = childNodeList  
                 # solution
 
             if v != self.start:  
-                self.aoStar(self.parent[v],
-                            True)  
+                self.aoStar(self.parent[v],True)  
 
             if not backTracking:  
                 for childNode in childNodeList: 
                     self.setStatus(childNode, 0)  
-                    self.aoStar(childNode,
-                                False)  
+                    self.aoStar(childNode,False)  
 
 
 h1 = {'A': 1, 'B': 6, 'C': 2, 'D': 12, 'E': 2, 'F': 1, 'G': 5, 'H': 7, 'I': 7, 'J': 1, 'T': 3}
