@@ -16,9 +16,6 @@ print(len(x_train))
 kn=KNeighborsClassifier(n_neighbors=1)
 kn.fit(x_train,y_train)
 
-kn=KNeighborsClassifier(n_neighbors=1)
-kn.fit(x_train,y_train)
-
 for i in range(len(x_test)):
     x=x_test[i]
     x_new=np.array([x])
