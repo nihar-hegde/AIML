@@ -1,6 +1,6 @@
-import numpy as np #numerical python
-import pandas as pd #uused for data analysis
-from sklearn.datasets import load_iris #importing iris datasets from datasets module
+import numpy as np 
+import pandas as pd 
+from sklearn.datasets import load_iris 
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 
