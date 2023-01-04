@@ -6,9 +6,7 @@ import pandas as pd
 import numpy as np
 %matplotlib inline
 
-
 iris = datasets.load_iris()
-
 
 X = pd.DataFrame(iris.data)
 X.columns = ['Sepal_Length','Sepal_Width','Petal_Length','Petal_Width']
@@ -16,11 +14,8 @@ X.columns = ['Sepal_Length','Sepal_Width','Petal_Length','Petal_Width']
 y = pd.DataFrame(iris.target)
 y.columns = ['Targets']
 
-
 model = KMeans(n_clusters=3)
 model.fit(X) 
-
-
 
 plt.figure(figsize=(14,14))
 
@@ -45,7 +40,6 @@ scaler = preprocessing.StandardScaler()
 scaler.fit(X)
 xsa = scaler.transform(X)
 xs = pd.DataFrame(xsa, columns = X.columns)
-
 
 from sklearn.mixture import GaussianMixture
 gmm = GaussianMixture(n_components=3)
